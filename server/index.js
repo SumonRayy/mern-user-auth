@@ -19,7 +19,7 @@ mongoose.connect("mongodb://localhost:27017/mern-user-auth");
 // creating routes
 // register route :
 app.post('/api/register', async (req, res) =>{
-    console.log("body :",req.body);
+    // console.log("body :",req.body);
     try {
         const newPassword = await bcrypt.hash(req.body.password, 10);
         await User.create({
